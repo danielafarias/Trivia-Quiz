@@ -10,6 +10,7 @@ function App() {
   const themeToggler = () => {
     theme === "light" ? setTheme("dark") : setTheme("light");
   };
+  
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <>
