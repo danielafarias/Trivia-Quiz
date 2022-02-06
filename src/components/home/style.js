@@ -39,20 +39,40 @@ export const Card = styled.div`
   height: 30rem;
 
   header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .card-info {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      background-color: #fe654f;
+      padding: 10px;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      p {
+        margin-left: 5px;
+      }
+    }
+  }
 
-      .card-info {
-        display: flex;
-        align-items: center;
-        background-color: #FE654F;
-        padding: 10px;
-        margin: 10px;
-        border-radius: 10px;
-         p {
-             margin-left: 5px;
-         }
+  .card-text {
+    display: flex;
+    align-items: center;
+    b {
+      margin-left: 5px;
+    }
+  }
+
+  .card-options {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      button {
+        color: #ffffff;
+      }
       }
   }
 `;

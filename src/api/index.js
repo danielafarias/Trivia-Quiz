@@ -15,7 +15,7 @@ export const getCategories = async () => {
 export const getTriviaByCategoryId = async (id) => {
     const response = await axios({
         method: "get",
-        url: `https://opentdb.com/api.php?amount=10&category=${id}`,
+        url: `https://opentdb.com/api.php?amount=1&category=${id}`,
         headers: {
           "Content-Type": "application/json",
         },
@@ -24,10 +24,10 @@ export const getTriviaByCategoryId = async (id) => {
       return response.data;
 }
 
-export const getRandomTrivia = async () => {
+export const getRandomTrivia = async (query) => {
     const response = await axios({
         method: "get",
-        url: "https://opentdb.com/api.php?amount=10",
+        url: "https://opentdb.com/api.php?amount=1",
         headers: {
           "Content-Type": "application/json",
         },
