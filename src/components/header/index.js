@@ -22,6 +22,11 @@ export function Header(props) {
                   <Icon.Sun size={30} style={{ color: "#ffffff" }} />
                 )}
               </button>
+              <a href="https://github.com/danielafarias/Trivia-Quiz" target="_blank" rel="noreferrer">
+              <button>
+                <Icon.GitHub size={30} style={{ color: "#ffffff" }} />
+              </button>
+              </a>
             </div>
     </HeaderContainer>
   );
