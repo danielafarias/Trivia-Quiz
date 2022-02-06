@@ -22,7 +22,7 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.text};
   }
 
-  ::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 10px;
 }
 

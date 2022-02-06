@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import { Main, Card } from "./style";
-import * as Icon from "react-feather";
 import { getTriviaByCategoryId } from "../../api";
+import * as Icon from "react-feather";
 
 export function Category(props) {
   const [quizzes, setQuizzes] = useState([]);
   const [answered, setAnswered] = useState(false);
   const [loading, setLoading] = useState(false);
   const [answers, setAnswers] = useState([]);
-  const [categoryName, setCategoryName] = useState('');
+  const [categoryName, setCategoryName] = useState("");
 
   useEffect(() => {
     generateTrivia();
@@ -35,9 +35,8 @@ export function Category(props) {
 
   useEffect(() => {
     quizzes.map((quiz) => setCategoryName(quiz.category));
-  }, [quizzes])
+  }, [quizzes]);
 
-  console.log(categoryName)
   return (
     <Main>
       {loading ? (
@@ -78,7 +77,7 @@ export function Category(props) {
                 {answers.map((answer) => (
                   <>
                     <button
-                      onClick={() =>  setAnswered(true)}
+                      onClick={() => setAnswered(true)}
                       style={{
                         backgroundColor:
                           answered && answer === obj.correct_answer

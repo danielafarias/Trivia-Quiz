@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
+import { getRandomTrivia } from "../../api";
 import { Main, Card } from "./style";
 import * as Icon from "react-feather";
-import { getRandomTrivia } from "../../api";
 
 export function Home() {
   const [quizzes, setQuizzes] = useState([]);
@@ -72,7 +72,7 @@ export function Home() {
                 {answers.map((answer) => (
                   <>
                     <button
-                      onClick={() =>  setAnswered(true)}
+                      onClick={() => setAnswered(true)}
                       style={{
                         backgroundColor:
                           answered && answer === obj.correct_answer

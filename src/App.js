@@ -18,22 +18,23 @@ function App() {
   const menuToggler = () => {
     display === "none" ? setDisplay("flex") : setDisplay("none");
   };
-  
+
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
-  const id = urlParams.get('id');
-  console.log(urlParams.has('id'));
+  const id = urlParams.get("id");
 
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <>
         <GlobalStyles />
         <div className="App">
-          <Header menuToggler={menuToggler} themeToggler={themeToggler} theme={theme}/>
-          <Menu display={display}/>
-          {
-            urlParams.has('id') ? <Category categoryId={id}/> : <Home/>
-          }
+          <Header
+            menuToggler={menuToggler}
+            themeToggler={themeToggler}
+            theme={theme}
+          />
+          <Menu display={display} />
+          {urlParams.has("id") ? <Category categoryId={id} /> : <Home />}
         </div>
       </>
     </ThemeProvider>

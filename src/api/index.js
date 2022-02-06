@@ -13,25 +13,25 @@ export const getCategories = async () => {
 };
 
 export const getTriviaByCategoryId = async (id) => {
-    const response = await axios({
-        method: "get",
-        url: `https://opentdb.com/api.php?amount=1&category=${id}`,
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-    
-      return response.data;
-}
+  const response = await axios({
+    method: "get",
+    url: `https://opentdb.com/api.php?amount=1&category=${id}`,
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
 
-export const getRandomTrivia = async (query) => {
-    const response = await axios({
-        method: "get",
-        url: "https://opentdb.com/api.php?amount=1",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-    
-      return response.data;
-}
+  return response.data;
+};
+
+export const getRandomTrivia = async () => {
+  const response = await axios({
+    method: "get",
+    url: "https://opentdb.com/api.php?amount=1",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  return response.data;
+};
