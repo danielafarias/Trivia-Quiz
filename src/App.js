@@ -1,13 +1,11 @@
 import { useState } from "react";
-import logo from "./assets/img/logo.svg";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./components/styles/globalStyles";
 import { lightTheme, darkTheme } from "./components/styles/theme";
-import { Header } from "./components/styles";
 import { Menu } from "./components/menu";
-import * as Icon from "react-feather";
 import { Home } from "./components/home";
 import { Category } from "./components/category";
+import { Header } from "./components/header";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -31,24 +29,7 @@ function App() {
       <>
         <GlobalStyles />
         <div className="App">
-          <Header>
-            <div className="logo">
-              <img src={logo} alt="logo" />
-              <h1>Trivia Quiz</h1>
-            </div>
-            <div className="btn-group">
-              <button onClick={menuToggler}>
-                <Icon.Filter size={30} style={{ color: "#ffffff" }} />
-              </button>
-              <button onClick={themeToggler}>
-                {theme === "light" ? (
-                  <Icon.Moon size={30} style={{ color: "#ffffff" }} />
-                ) : (
-                  <Icon.Sun size={30} style={{ color: "#ffffff" }} />
-                )}
-              </button>
-            </div>
-          </Header>
+          <Header menuToggler={menuToggler} themeToggler={themeToggler} theme={theme}/>
           <Menu display={display}/>
           {
             urlParams.has('id') ? <Category categoryId={id}/> : <Home/>

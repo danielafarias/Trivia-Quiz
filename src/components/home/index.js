@@ -10,6 +10,10 @@ export function Home() {
   const [answers, setAnswers] = useState([]);
 
   useEffect(() => {
+    generateRandom();
+  }, []);
+
+  useEffect(() => {
     const timeout = setTimeout(async () => {
       setLoading(false);
       return clearTimeout(timeout);
@@ -41,7 +45,7 @@ export function Home() {
         <>
           <button onClick={generateRandom}>
             <Icon.Repeat size={30} />
-            Generate random trivia
+            Generate new random trivia
           </button>
           {quizzes.map((obj, i) => (
             <Card key={i}>

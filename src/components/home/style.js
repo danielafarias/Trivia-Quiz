@@ -42,12 +42,13 @@ export const Card = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #fe654f;
 
     .card-info {
       display: flex;
       align-items: center;
-      background-color: #fe654f;
-      padding: 10px;
+      padding: 5px;
       margin-bottom: 1rem;
       border-radius: 10px;
       p {

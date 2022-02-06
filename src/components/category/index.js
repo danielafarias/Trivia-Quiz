@@ -8,6 +8,11 @@ export function Category(props) {
   const [answered, setAnswered] = useState(false);
   const [loading, setLoading] = useState(false);
   const [answers, setAnswers] = useState([]);
+  const [categoryName, setCategoryName] = useState('');
+
+  useEffect(() => {
+    generateTrivia();
+  }, []);
 
   useEffect(() => {
     const timeout = setTimeout(async () => {
@@ -28,6 +33,11 @@ export function Category(props) {
     });
   };
 
+  useEffect(() => {
+    quizzes.map((quiz) => setCategoryName(quiz.category));
+  }, [quizzes])
+
+  console.log(categoryName)
   return (
     <Main>
       {loading ? (
@@ -41,7 +51,7 @@ export function Category(props) {
         <>
           <button onClick={generateTrivia}>
             <Icon.Repeat size={30} />
-            Generate trivia
+            Generate new {categoryName} trivia
           </button>
           {quizzes.map((obj, i) => (
             <Card key={i}>

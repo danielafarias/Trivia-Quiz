@@ -17,6 +17,11 @@ export const GlobalStyles = createGlobalStyle`
     position: relative; 
   }
 
+  a {
+    text-decoration: none;
+    color: ${({ theme }) => theme.text};
+  }
+
   ::-webkit-scrollbar {
   width: 10px;
 }
