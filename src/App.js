@@ -6,6 +6,7 @@ import { lightTheme, darkTheme } from "./components/styles/theme";
 import { Header } from "./components/styles";
 import { Menu } from "./components/menu";
 import * as Icon from "react-feather";
+import { Home } from "./components/home";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -43,6 +44,7 @@ function App() {
             </div>
           </Header>
           <Menu display={display}/>
+          <Home />
         </div>
       </>
     </ThemeProvider>

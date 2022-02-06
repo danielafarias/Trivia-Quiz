@@ -2,23 +2,23 @@ import styled from "styled-components";
 
 export const MenuContainer = styled.menu`
     margin: 0;
+    padding: 0;
     display: ${({ display }) => display};
     flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-end;
-    
+    position: top;
+    width: 100%;
     .menu-category {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         cursor: pointer;
-        background-color: #98DFAF;
-        width: 30%;
+        background-color: #FE654F;
+        width: 100%;
         p {
-            margin-right: 5px;
+            margin-left: 10px;
         }
 
         :hover {
-            filter: brightness(90%);
+            filter: brightness(80%);
           }
     }
 `;

@@ -14,6 +14,7 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.text};
     font-family: 'IBM Plex Sans Thai Looped', sans-serif;
     transition: all 0.50s linear;
+    position: relative; 
   }
 
   ::-webkit-scrollbar {
