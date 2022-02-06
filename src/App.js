@@ -3,14 +3,20 @@ import logo from "./assets/img/logo.svg";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./components/styles/globalStyles";
 import { lightTheme, darkTheme } from "./components/styles/theme";
-import { Header } from "./components/styles/styles";
+import { Header } from "./components/styles";
+import { Menu } from "./components/menu";
 import * as Icon from "react-feather";
 
 function App() {
   const [theme, setTheme] = useState("light");
+  const [display, setDisplay] = useState("none");
 
   const themeToggler = () => {
     theme === "light" ? setTheme("dark") : setTheme("light");
+  };
+
+  const menuToggler = () => {
+    display === "none" ? setDisplay("flex") : setDisplay("none");
   };
 
   return (
@@ -24,7 +30,7 @@ function App() {
               <h1>Trivia Quiz</h1>
             </div>
             <div className="btn-group">
-              <button>
+              <button onClick={menuToggler}>
                 <Icon.Menu size={30} style={{ color: "#ffffff" }} />
               </button>
               <button onClick={themeToggler}>
@@ -36,6 +42,7 @@ function App() {
               </button>
             </div>
           </Header>
+          <Menu display={display}/>
         </div>
       </>
     </ThemeProvider>

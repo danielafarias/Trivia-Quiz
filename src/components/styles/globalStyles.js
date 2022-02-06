@@ -15,4 +15,16 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'IBM Plex Sans Thai Looped', sans-serif;
     transition: all 0.50s linear;
   }
+
+  ::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #98DFAF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FE654F;
+}
   `;
