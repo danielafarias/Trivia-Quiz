@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+# TRIVIA-QUIZ
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![GitHub repo size](https://img.shields.io/github/repo-size/danielafarias/Trivia-Quiz?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/danielafarias/Trivia-Quiz?style=for-the-badge)
+![GitHub forks](https://img.shields.io/chocolatey/dt/Trivia-Quiz?style=for-the-badge)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/danielafarias/Trivia-Quiz?style=for-the-badge)
+![GitHub Last Commit](https://img.shields.io/github/last-commit/danielafarias/Trivia-Quiz?style=for-the-badge)
+![Github Watchers](https://img.shields.io/github/watchers/danielafarias/Trivia-Quiz?style=for-the-badge)
 
-## Available Scripts
+![trivia-quiz](public/logo.svg)
 
-In the project directory, you can run:
 
-### `npm start`
+> Trivia-Quiz é uma aplicação baseada no jogo Perguntados, em que consiste em um quiz de diferentes questões. Feito com ReactJS, JavaScript, Styled-Components, Axios, React-Feather e Open Trivia Database.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### ❤️ Ajustes e melhorias
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
-### `npm test`
+- [x] Projeto inicializado
+- [x] Projeto Finalizado
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ⚛️ Tecnologias
+- ReactJS; 
+- JavaScript; 
+- Styled-Components;
+- Axios;
+- React-Feather;
+- Open Trivia Database (https://opentdb.com/);
 
-### `npm run build`
+## 🚀 Instalando `<Trivia-Quiz>`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Para instalar o `<Trivia-Quiz>`, siga estas etapas:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Clone o projeto:
+```
+<git clone https://github.com/danielafarias/Trivia-Quiz.git>
+```
+Em seguida, adicione as bibliotecas e dependências necessárias:
+```
+<cd Trivia-Quiz>
+```
+```
+<npm init>
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🧑‍💻 Usando `<Trivia-Quiz>`
 
-### `npm run eject`
+Para usar `<Trivia-Quiz>`:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+<npm run start>
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 💌 Contribuindo para `<Trivia-Quiz>`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Para contribuir com `<Trivia-Quiz>`, siga estas etapas:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Bifurque este repositório.
+2. Crie um branch: `git checkout -b <trivia_seu_nome>`.
+3. Faça suas alterações e confirme-as: `git commit -m '<sua_mensagem_de_commit>'`
+4. Envie para o branch original: `git push origin <master> / <https://github.com/danielafarias/Trivia-Quiz.git>`
+5. Crie a solicitação de pull.
 
-## Learn More
+Como alternativa, consulte a documentação do GitHub em [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🤝 Colaboradores
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Seguintes pessoas que contribuíram para este projeto:
 
-### Code Splitting
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/danielafarias">
+        <img src="https://avatars.githubusercontent.com/u/79869120?v=4" width="100px;" alt="Foto da Daniela Farias no GitHub"/><br>
+        <sub>
+          <b>Daniela Farias</b>
+        </sub>
+      </a>
+    </td>
+    
+  </tr>
+</table>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📃 Licença
 
-### Analyzing the Bundle Size
+Esse projeto está sob licença MIT ⚖️. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+[⬆ Voltar ao topo](#trivia-quiz)<br>
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+© README.md template by iuricode
+```
