@@ -13,9 +13,11 @@ export function Menu(props) {
   return (
     <MenuContainer display={props.display}>
       {categories.map((category) => (
+        <a href={`/category?id=${category.id}`}>
           <div className="menu-category">
               <p>{category.name}</p>
           </div>
+        </a>
       ))}
     </MenuContainer>
   );

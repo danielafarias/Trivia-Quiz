@@ -7,6 +7,7 @@ import { Header } from "./components/styles";
 import { Menu } from "./components/menu";
 import * as Icon from "react-feather";
 import { Home } from "./components/home";
+import { Category } from "./components/category";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -19,6 +20,11 @@ function App() {
   const menuToggler = () => {
     display === "none" ? setDisplay("flex") : setDisplay("none");
   };
+  
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const id = urlParams.get('id');
+  console.log(urlParams.has('id'));
 
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
@@ -32,7 +38,7 @@ function App() {
             </div>
             <div className="btn-group">
               <button onClick={menuToggler}>
-                <Icon.Menu size={30} style={{ color: "#ffffff" }} />
+                <Icon.Filter size={30} style={{ color: "#ffffff" }} />
               </button>
               <button onClick={themeToggler}>
                 {theme === "light" ? (
@@ -44,7 +50,9 @@ function App() {
             </div>
           </Header>
           <Menu display={display}/>
-          <Home />
+          {
+            urlParams.has('id') ? <Category categoryId={id}/> : <Home/>
+          }
         </div>
       </>
     </ThemeProvider>

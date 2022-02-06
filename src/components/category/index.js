@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { Main, Card } from "./style";
 import * as Icon from "react-feather";
-import { getRandomTrivia } from "../../api";
+import { getTriviaByCategoryId } from "../../api";
 
-export function Home() {
+export function Category(props) {
   const [quizzes, setQuizzes] = useState([]);
   const [answered, setAnswered] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -16,10 +16,10 @@ export function Home() {
     }, 1000);
   }, [loading]);
 
-  const generateRandom = async () => {
+  const generateTrivia = async () => {
     setLoading(true);
     setAnswered(false);
-    await getRandomTrivia().then((response) => {
+    await getTriviaByCategoryId(props.categoryId).then((response) => {
       setQuizzes(response.results);
       response.results.map((result) => {
         result.incorrect_answers.push(result.correct_answer);
@@ -39,9 +39,9 @@ export function Home() {
         />
       ) : (
         <>
-          <button onClick={generateRandom}>
+          <button onClick={generateTrivia}>
             <Icon.Repeat size={30} />
-            Generate random trivia
+            Generate trivia
           </button>
           {quizzes.map((obj, i) => (
             <Card key={i}>
